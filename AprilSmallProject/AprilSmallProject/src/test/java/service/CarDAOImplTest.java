@@ -1,13 +1,14 @@
 package service;
 
 import entity.Car;
-import junit.framework.TestCase;
+import org.junit.Test;
 
 import java.sql.*;
 
 public class CarDAOImplTest {
 
-    public void testCreate() {
+    @Test
+    public void createTest() {
         try {
             Connection conn = DriverManager.getConnection("" +
                     "jdbc:h2:mem:smallAprilProject");
@@ -29,18 +30,44 @@ public class CarDAOImplTest {
         }
     }
 
-    public void testGet() {
-    }
-
-    public void testUpdate() {
-    }
-
-    public void testDelete() {
-        try {
-            Connection conn = DriverManager.getConnection("jdbc:h2:mem:smallAprilProject");
+    @Test
+    public void getTest() {
+        try (Connection conn = DriverManager.getConnection("" +
+                "jdbc:h2:mem:smallAprilProject")) {
+            //Car car = new Car(1, "Kia", "black", 3600);
             Statement statement = conn.createStatement();
             statement.execute("create table car (id int not null primary key," +
                     "carname char(50),color char(50), price int)");
+            String query = "select carname from car where id = 1";
+            statement.executeQuery(query);
+            System.out.println("Запись получена!");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Test
+    public void updateTest() {
+        try (Connection conn = DriverManager.getConnection("" +
+                "jdbc:h2:mem:smallAprilProject")) {
+            //Car car = new Car(1, "Kia", "black", 3600);
+            Statement statement = conn.createStatement();
+            statement.execute("create table car (id int not null primary key," +
+                    "carname char(50),color char(50), price int)");
+            String query = "update car set carname = 'Zaporozhets' where id = 1";
+            statement.executeUpdate(query);
+            System.out.println("Запись получена!");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    @Test
+    public void deleteTest() {
+        try {
+            Connection conn = DriverManager.getConnection("jdbc:h2:mem:smallAprilProject");
+            Statement statement = conn.createStatement();
             String query = "delete from car where id = ?";
             PreparedStatement ps = conn.prepareStatement(query);
             ps.setInt(1, 1);
