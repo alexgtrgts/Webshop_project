@@ -1,6 +1,7 @@
 package service;
 
 import entity.Car;
+import junit.framework.TestCase;
 import org.junit.Test;
 
 import java.sql.*;
