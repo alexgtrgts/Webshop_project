@@ -2,10 +2,7 @@ package it;
 
 import lombok.*;
 
-import javax.persistence.Column;
-import javax.persistence.DiscriminatorValue;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Getter
 @Setter
@@ -14,8 +11,7 @@ import javax.persistence.Table;
 @Entity
 @AllArgsConstructor
 @Table
-@DiscriminatorValue("H")
-
+@PrimaryKeyJoinColumn(name = "TASK_ID")
 public class HomeTask extends Task {
 
     @Column
