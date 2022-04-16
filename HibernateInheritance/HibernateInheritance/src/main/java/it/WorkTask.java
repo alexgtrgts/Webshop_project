@@ -11,7 +11,6 @@ import javax.persistence.*;
 @AllArgsConstructor
 @Entity
 @Table
-@PrimaryKeyJoinColumn(name = "TASK_ID")
 public class WorkTask extends Task {
 
     @Column

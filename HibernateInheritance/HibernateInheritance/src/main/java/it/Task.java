@@ -13,7 +13,7 @@ import javax.persistence.*;
 @Data
 @Table
 @Entity
-@Inheritance(strategy = InheritanceType.JOINED)
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public class Task {
 
     @Id
