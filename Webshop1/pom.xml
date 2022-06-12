@@ -7,12 +7,12 @@
   <groupId>it.academy</groupId>
   <artifactId>Webshop1</artifactId>
   <version>1</version>
+  <packaging>pom</packaging>
   <modules>
     <module>repository</module>
     <module>service</module>
     <module>controller</module>
   </modules>
-  <packaging>pom</packaging>
 
   <name>Webshop1 Maven Webapp</name>
   <!-- FIXME change it to the project's website -->
@@ -32,11 +32,6 @@
       <artifactId>junit</artifactId>
       <version>4.11</version>
       <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>jstl</groupId>
-      <artifactId>jstl</artifactId>
-      <version>1.2</version>
     </dependency>
       <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-war-plugin -->
       <dependency>
@@ -80,7 +75,7 @@
     </dependencies>
 
   <build>
-    <finalName>Webshop1</finalName>
+    <!--<finalName>Webshop1</finalName> -->
       <plugins>
         <plugin>
           <artifactId>maven-clean-plugin</artifactId>
@@ -101,7 +96,7 @@
         </plugin>
         <plugin>
           <artifactId>maven-war-plugin</artifactId>
-          <version>3.2.2</version>
+          <version>3.3.2</version>
         </plugin>
         <plugin>
           <artifactId>maven-install-plugin</artifactId>

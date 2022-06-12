@@ -1,0 +1,10 @@
+serv\EditSupplierServlet.class
+serv\EditProductServlet.class
+serv\ListAllProductsServlet.class
+serv\AddSupplierServlet.class
+serv\ListAllSuppliersServlet.class
+serv\DeleteProductServlet.class
+serv\AddProductServlet.class
+serv\DeleteSupplierServlet.class
+serv\UpdateProductServlet.class
+serv\UpdateSupplierServlet.class

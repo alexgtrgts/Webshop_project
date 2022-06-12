@@ -23,7 +23,7 @@ public class AddSupplierServlet extends HttpServlet {
         PrintWriter pw = resp.getWriter();
         String name = req.getParameter("name");
         String address = req.getParameter("address");
-        String vatNumber = req.getParameter("vatnumber");
+        String vatNumber = req.getParameter("vatNumber");
         Supplier sup = new Supplier(name,address,vatNumber);
         try {
             dsi.create(sup);
@@ -36,7 +36,7 @@ public class AddSupplierServlet extends HttpServlet {
         resp.setContentType("text/html");
         pw.println("<html><body>");
         pw.println("<br>");
-        pw.println("<a href=\"index.jsp\">Go back</a>");
+        pw.println("<a href=\"listAllSuppliers\">Go back</a>");
         pw.println("<br>");
         pw.println("</body></html>");
     }
