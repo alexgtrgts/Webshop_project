@@ -29,6 +29,6 @@ public class UpdateSupplierServlet extends HttpServlet {
                 .vatNumber(vatNumber)
                 .build();
         Supplier supplier1 = dsi.update(supplier);
-        resp.sendRedirect(req.getContextPath()+"/listAllSuppliers");
+        resp.sendRedirect(req.getContextPath() + "/listAllSuppliers");
     }
 }

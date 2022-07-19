@@ -1,7 +1,6 @@
 package serv;
 
 import DAO.DAOManufacturerImpl;
-import DAO.DAOProductImpl;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -26,6 +25,6 @@ public class DeleteManufacturerServlet extends HttpServlet {
         }
         //ServletContext context = getServletContext();
         resp.sendRedirect(req.getContextPath() + "/listAllManufacturers");
-        //rd.forward(req,resp);
+        //resp.forward(req,resp);
     }
 }

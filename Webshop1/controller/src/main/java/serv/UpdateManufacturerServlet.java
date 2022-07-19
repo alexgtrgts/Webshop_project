@@ -1,9 +1,7 @@
 package serv;
 
 import DAO.DAOManufacturerImpl;
-import DAO.DAOProductImpl;
 import Entity.Manufacturer;
-import Entity.Product;
 import lombok.SneakyThrows;
 
 import javax.servlet.ServletException;
@@ -31,7 +29,7 @@ public class UpdateManufacturerServlet extends HttpServlet {
                 .brand(brand)
                 .build();
         Manufacturer read = dmi.update(manufacturer);
-        resp.sendRedirect(req.getContextPath()+"/listAllManufacturers");
+        resp.sendRedirect(req.getContextPath() + "/listAllManufacturers");
 
     }
 }

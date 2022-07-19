@@ -1,8 +1,6 @@
 package serv;
 
-import DAO.DAOManufacturerImpl;
 import DAO.DAOSellerImpl;
-import Entity.Manufacturer;
 import Entity.Seller;
 
 import javax.servlet.RequestDispatcher;
@@ -26,8 +24,8 @@ public class ListAllSellersServlet extends HttpServlet {
             List<Seller> seller = dsi.listAll();
             ServletContext context = getServletContext();
             RequestDispatcher rd = context.getRequestDispatcher("/ListAllSellers.jsp");
-            req.setAttribute("seller",seller);
-            rd.forward(req,resp);
+            req.setAttribute("seller", seller);
+            rd.forward(req, resp);
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         } catch (ClassNotFoundException e) {

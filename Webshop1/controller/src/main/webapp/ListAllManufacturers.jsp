@@ -1,18 +1,22 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<fmt:setLocale value="${lang}"/>
+<fmt:setBundle basename="MessageBundle" var="messages"/>
+
 <!DOCTYPE html>
-<html>
+<html lang="${lang}">
 <head>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style/listall.css">
 </head>
 <body>
 <br>
 <br>
-<table>
+<table align="center" width="700" border="2">
     <tr>
-        <th>Name</th>
-        <th>Address</th>
-        <th>Brand</th>
+        <th><fmt:message key="Name" bundle="${messages}"/></th>
+        <th><fmt:message key="Address" bundle="${messages}"/></th>
+        <th><fmt:message key="Brand" bundle="${messages}"/></th>
         <th></th>
     </tr>
     <c:forEach var="manufacturer" items="${manufacturer}">
@@ -23,24 +27,27 @@
             <td>
                 <form action="editManufacturer">
                     <input type="hidden" name="id" value="${manufacturer.id}">
-                    <button type="submit">Edit</button>
+                    <button class="button" type="submit"><fmt:message key="Edit" bundle="${messages}"/></button>
                 </form>
             </td>
             <td>
                 <form action="deleteManufacturer" method="get">
                     <input type="hidden" name="id" value="${manufacturer.id}">
-                    <button type="submit" value="${manufacturer.id}">Delete</button>
+                    <button class="button" type="submit" value="${manufacturer.id}"><fmt:message key="Delete"
+                                                                                                 bundle="${messages}"/></button>
                 </form>
             </td>
         </tr>
     </c:forEach>
-    <tr>
-        <td>
-            <a href="AddManufacturer.jsp">Add a manufacturer</a>
-        </td>
-    </tr>
 </table>
-<br>
-<a href="index.jsp">Go to the main page</a>
+<div align="center">
+    <form action="AddManufacturer.jsp">
+        <button class="button1" type="submit"><fmt:message key="addamanufacturer" bundle="${messages}"/></button>
+    </form>
+    <br>
+    <form action="index.jsp">
+        <button class="button1" type="submit"><fmt:message key="GoToTheMainPage" bundle="${messages}"/></button>
+    </form>
+</div>
 </body>
 </html>

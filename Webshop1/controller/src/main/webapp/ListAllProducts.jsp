@@ -1,20 +1,23 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<fmt:setLocale value="${lang}"/>
+<fmt:setBundle basename="MessageBundle" var="messages"/>
+
 <!DOCTYPE html>
-<html>
+<html lang="${lang}">
 <head>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style/listall.css">
 </head>
 <body>
 <br>
 <br>
-<table>
+<table align="center" width="700" border="2">
     <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Price</th>
-        <th></th>
+        <td><fmt:message key="Name" bundle="${messages}"/></td>
+        <td><fmt:message key="Type" bundle="${messages}"/></td>
+        <td><fmt:message key="Description" bundle="${messages}"/></td>
+        <td><fmt:message key="Price" bundle="${messages}"/></td>
     </tr>
     <c:forEach var="product" items="${product}">
         <tr>
@@ -25,24 +28,28 @@
             <td>
                 <form action="editProduct">
                     <input type="hidden" name="id" value="${product.id}">
-                    <button type="submit">Edit</button>
+                    <button class="button" type="submit"><fmt:message key="Edit" bundle="${messages}"/></button>
                 </form>
             </td>
             <td>
                 <form action="deleteProduct" method="get">
                     <input type="hidden" name="id" value="${product.id}">
-                    <button type="submit" value="${product.id}">Delete</button>
+                    <button class="button" type="submit" value="${product.id}"><fmt:message key="Delete"
+                                                                                            bundle="${messages}"/></button>
                 </form>
             </td>
         </tr>
     </c:forEach>
-    <tr>
-        <td>
-            <a href="AddProduct.jsp">Add a product</a>
-        </td>
-    </tr>
 </table>
 <br>
-<a href="index.jsp">Go to the main page</a>
+<div align="center">
+    <form action="AddProduct.jsp">
+        <button class="button1" type="submit"><fmt:message key="addaproduct" bundle="${messages}"/></button>
+    </form>
+    <br>
+    <form action="index.jsp">
+        <button class="button1" type="submit"><fmt:message key="GoToTheMainPage" bundle="${messages}"/></button>
+    </form>
+</div>
 </body>
 </html>

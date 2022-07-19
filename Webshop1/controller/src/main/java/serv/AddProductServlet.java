@@ -18,13 +18,13 @@ public class AddProductServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         DAOProductImpl dpi = new DAOProductImpl();
-        PrintWriter pw =resp.getWriter();
+        PrintWriter pw = resp.getWriter();
         String name = req.getParameter("name");
         String type = req.getParameter("type");
         String description = req.getParameter("description");
         String price = req.getParameter("price");
         Product product;
-        product = new Product(name,Double.parseDouble(price),type,description);
+        product = new Product(name, Double.parseDouble(price), type, description);
         try {
             dpi.create(product);
         } catch (SQLException throwables) {

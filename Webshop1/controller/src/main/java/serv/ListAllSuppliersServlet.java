@@ -24,8 +24,8 @@ public class ListAllSuppliersServlet extends HttpServlet {
             List<Supplier> supplierList = dsi.listAll();
             ServletContext context = getServletContext();
             RequestDispatcher rd = context.getRequestDispatcher("/ListAllSuppliers.jsp");
-            req.setAttribute("supplier",supplierList);
-            rd.forward(req,resp);
+            req.setAttribute("supplier", supplierList);
+            rd.forward(req, resp);
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         } catch (ClassNotFoundException e) {

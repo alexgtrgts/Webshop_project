@@ -1,6 +1,5 @@
 package serv;
 
-import DAO.DAOProductImpl;
 import DAO.DAOSupplierImpl;
 
 import javax.servlet.ServletException;

@@ -1,8 +1,6 @@
 package serv;
 
-import DAO.DAOProductImpl;
 import DAO.DAOSellerImpl;
-import Entity.Product;
 import Entity.Seller;
 import lombok.SneakyThrows;
 
@@ -31,6 +29,6 @@ public class UpdateSellerServlet extends HttpServlet {
                 .tel(tel)
                 .build();
         Seller read = dsi.update(seller);
-        resp.sendRedirect(req.getContextPath()+"/listAllSellers");
+        resp.sendRedirect(req.getContextPath() + "/listAllSellers");
     }
 }

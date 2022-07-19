@@ -25,8 +25,8 @@ public class EditProductServlet extends HttpServlet {
         Product read = dpi.read(Integer.parseInt(param));
         ServletContext context = getServletContext();
         RequestDispatcher rd = context.getRequestDispatcher("/EditProduct.jsp");
-        req.setAttribute("product",read);
-        rd.forward(req,resp);
+        req.setAttribute("product", read);
+        rd.forward(req, resp);
 
     }
 }

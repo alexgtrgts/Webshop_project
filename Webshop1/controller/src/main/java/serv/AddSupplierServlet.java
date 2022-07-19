@@ -24,7 +24,7 @@ public class AddSupplierServlet extends HttpServlet {
         String name = req.getParameter("name");
         String address = req.getParameter("address");
         String vatNumber = req.getParameter("vatNumber");
-        Supplier sup = new Supplier(name,address,vatNumber);
+        Supplier sup = new Supplier(name, address, vatNumber);
         try {
             dsi.create(sup);
         } catch (SQLException e) {

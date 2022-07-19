@@ -1,9 +1,7 @@
 package serv;
 
 import DAO.DAOManufacturerImpl;
-import DAO.DAOProductImpl;
 import Entity.Manufacturer;
-import Entity.Product;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletContext;
@@ -26,8 +24,8 @@ public class ListAllManufacturersServlet extends HttpServlet {
             List<Manufacturer> manufacturer = dmi.listAll();
             ServletContext context = getServletContext();
             RequestDispatcher rd = context.getRequestDispatcher("/ListAllManufacturers.jsp");
-            req.setAttribute("manufacturer",manufacturer);
-            rd.forward(req,resp);
+            req.setAttribute("manufacturer", manufacturer);
+            rd.forward(req, resp);
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         } catch (ClassNotFoundException e) {

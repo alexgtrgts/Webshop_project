@@ -1,9 +1,7 @@
 package serv;
 
 
-import DAO.DAOManufacturerImpl;
 import DAO.DAOSellerImpl;
-import Entity.Manufacturer;
 import Entity.Seller;
 import lombok.SneakyThrows;
 
@@ -27,8 +25,8 @@ public class EditSellerServlet extends HttpServlet {
         Seller seller = dsi.read(Integer.parseInt(param));
         ServletContext context = getServletContext();
         RequestDispatcher rd = context.getRequestDispatcher("/EditSeller.jsp");
-        req.setAttribute("seller",seller);
-        rd.forward(req,resp);
+        req.setAttribute("seller", seller);
+        rd.forward(req, resp);
 
     }
 }

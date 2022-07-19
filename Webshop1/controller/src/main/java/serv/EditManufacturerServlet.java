@@ -2,9 +2,7 @@ package serv;
 
 
 import DAO.DAOManufacturerImpl;
-import DAO.DAOProductImpl;
 import Entity.Manufacturer;
-import Entity.Product;
 import lombok.SneakyThrows;
 
 import javax.servlet.RequestDispatcher;
@@ -29,6 +27,5 @@ public class EditManufacturerServlet extends HttpServlet {
         RequestDispatcher rd = context.getRequestDispatcher("/EditManufacturer.jsp");
         req.setAttribute("manufacturer",manufacturer);
         rd.forward(req,resp);
-
     }
 }

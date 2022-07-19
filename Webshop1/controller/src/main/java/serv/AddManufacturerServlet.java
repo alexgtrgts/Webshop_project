@@ -1,10 +1,7 @@
 package serv;
 
-import DAO.DAOManufacturer;
 import DAO.DAOManufacturerImpl;
-import DAO.DAOProductImpl;
 import Entity.Manufacturer;
-import Entity.Product;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
