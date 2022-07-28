@@ -7,7 +7,7 @@
 <!DOCTYPE html>
 <html lang="${lang}">
 <head>
-    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <link rel="stylesheet" type="text/css" href="../../static/css/style.css">
 </head>
 <p>
 <h1 align="center"><fmt:message key="Pleaseaddaproduct" bundle="${messages}"/></h1>
@@ -29,7 +29,7 @@
         </form>
         <br>
 
-        <form action="index.jsp">
+        <form action="../static/1.html">
             <button class="button" type="submit"><fmt:message key="GoToTheMainPage" bundle="${messages}"/></button>
         </form>
     </fieldset>

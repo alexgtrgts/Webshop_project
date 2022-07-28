@@ -7,7 +7,7 @@
 <!DOCTYPE html>
 <html lang="${lang}">
 <head>
-    <link rel="stylesheet" type="text/css" href="style/edit.css">
+    <link rel="stylesheet" type="text/css" href="../../static/css/edit.css">
     <title><fmt:message key="Pleaseeditproductdata" bundle="${messages}"/></title>
 </head>
 <body>

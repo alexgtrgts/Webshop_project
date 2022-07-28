@@ -7,7 +7,7 @@
 <!DOCTYPE html>
 <html lang="${lang}">
 <head>
-    <link rel="stylesheet" type="text/css" href="style/listall.css">
+    <link rel="stylesheet" type="text/css" href="../../static/css/listall.css">
 </head>
 <body>
 <br>
@@ -47,7 +47,7 @@
         <button class="button1" type="submit"><fmt:message key="addasupplier" bundle="${messages}"/></button>
     </form>
     <br>
-    <form action="index.jsp">
+    <form action="../static/1.html">
         <button class="button1" type="submit"><fmt:message key="GoToTheMainPage" bundle="${messages}"/></button>
     </form>
 </div>

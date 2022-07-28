@@ -7,20 +7,20 @@
 <!DOCTYPE html>
 <html lang="${lang}">
 <head>
-    <link rel="stylesheet" type="text/css" href="style/edit.css">
-    <title><fmt:message key="Pleaseeditseller'sdata" bundle="${messages}"/></title>
+    <link rel="stylesheet" type="text/css" href="../../static/css/edit.css">
+    <title><fmt:message key="Pleaseeditsupplier'sdata" bundle="${messages}"/></title>
 </head>
 <body>
 <div align="center">
     <fieldset class="fieldset">
-        <form action="updateSeller" method="get">
+        <form action="updateSupplier" method="get">
             <label for="name"><fmt:message key="Name" bundle="${messages}"/></label>
-            <input type="text" id="name" name="name" value="${seller.name}"><br>
-            <input type="hidden" id="id" name="id" value="${seller.id}"><br>
+            <input type="text" id="name" name="name" value="${supplier.name}"><br>
+            <input type="hidden" id="id" name="id" value="${supplier.id}"><br>
             <label for="address"><fmt:message key="Address" bundle="${messages}"/></label>
-            <input type="text" id="address" name="address" value="${seller.address}"><br>
-            <label for="tel"><fmt:message key="Tel" bundle="${messages}"/></label>
-            <input type="text" id="tel" name="tel" value="${seller.tel}"><br>
+            <input type="text" id="address" name="address" value="${supplier.address}"><br>
+            <label for="vatnumber"><fmt:message key="VatNumber" bundle="${messages}"/></label>
+            <input type="text" id="vatnumber" name="vatnumber" value="${supplier.vatNumber}"><br>
             <input class="button" type="submit" value="Подтвердить"><br>
             <button class="button" type="submit" value="index.jsp"><fmt:message key="GoBack"
                                                                                 bundle="${messages}"/></button>
@@ -29,3 +29,4 @@
 </div>
 </body>
 </html>
+

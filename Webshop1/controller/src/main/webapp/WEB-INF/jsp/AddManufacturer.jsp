@@ -7,7 +7,7 @@
 <!DOCTYPE html>
 <html lang="${lang}">
 <head>
-    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <link rel="stylesheet" type="text/css" href="../../static/css/style.css">
 </head>
 <body>
 <wl:summary>
@@ -30,7 +30,7 @@
     </div>
 </fieldset>
 <div align="center">
-    <form action="index.jsp">
+    <form action="../static/1.html">
         <button class="button" type="submit"><fmt:message key="GoToTheMainPage" bundle="${messages}"/></button>
     </form>
 </div>
